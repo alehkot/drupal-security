@@ -28,7 +28,6 @@ Handling [PSA-2014-003](https://www.drupal.org/PSA-2014-003) (Drupalgeddon)
  4. Scan public / private files locations for *.php, *.sh and any other suspicious files. There are some strategies to improve this procedure: for instance, if only images uploads are allowed, then we scan scan for any files other than images;
  5. If the webserver setup is permissive in terms of permissions and users (e.g. Apache user can write anywhere), it will be additionally required to perform audit of the entire server;
  6. Install, Security review, Drupalgeddon, Site Audit contributed modules and execute these modules checks;
-Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new;
  7. If the pages are built using Features module and if allowed, then revert all the features to their original state;
  8. Rebuild the menu executing core ‘menu_rebuild()’ function;
  9. Review the `variable` table to find any suspicious values. On some installations it might be possible to truncate the table entirely, if Features module is used and if default values of variables are acceptable.
@@ -40,4 +39,5 @@ Set another Drupal hash salt in settings.file for passwords generation, reset pa
  15. Analyze Apache Logs for POST keys with strings 'UPDATE', 'INSERT', 'DELETE', ‘?q=node&destination=node’;
  16. Check places in Panels, Blocks, Views where custom PHP snippets might be used, e.g. in custom access rules.
  17. Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new;
- 18. Check the database for new MySQL users, update MySQL passwords and regenerate passwords/tokens for any systems, which are integrated.
+ 18. Check the database for new MySQL users, update MySQL passwords and regenerate passwords/tokens for any systems, which are integrated;
+ 19. Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new.
