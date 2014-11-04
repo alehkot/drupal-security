@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Drupal Security : Pieces of advice on how-to mitigate attacks on Drupal websites.">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Drupal Security by alehkot</title>
+    <title>Drupal Security</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Drupal Security</h1>
-        <h2>Pieces of advice on how-to mitigate attacks on Drupal websites.</h2>
-        <a href="https://github.com/alehkot/drupal-security" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/alehkot/drupal-security">View on GitHub</a>
+
+          <h1 id="project_title">Drupal Security</h1>
+          <h2 id="project_tagline">Pieces of advice on how-to mitigate attacks on Drupal websites.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/alehkot/drupal-security/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/alehkot/drupal-security/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="drupal-security" class="anchor" href="#drupal-security"><span class="octicon octicon-link"></span></a>Drupal Security</h1>
 
 <p>Pieces of advice on how-to improve the security on your Drupal websites.</p>
@@ -64,8 +67,7 @@
 <li>If possible, redeploy the latest version of the code base;</li>
 <li>Scan public / private files locations for *.php, *.sh and any other suspicious files. There are some strategies to improve this procedure: for instance, if only images uploads are allowed, then we scan scan for any files other than images;</li>
 <li>If the webserver setup is permissive in terms of permissions and users (e.g. Apache user can write anywhere), it will be additionally required to perform audit of the entire server;</li>
-<li>Install, Security review, Drupalgeddon, Site Audit contributed modules and execute these modules checks;
-Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new;</li>
+<li>Install, Security review, Drupalgeddon, Site Audit contributed modules and execute these modules checks;</li>
 <li>If the pages are built using Features module and if allowed, then revert all the features to their original state;</li>
 <li>Rebuild the menu executing core ‘menu_rebuild()’ function;</li>
 <li>Review the <code>variable</code> table to find any suspicious values. On some installations it might be possible to truncate the table entirely, if Features module is used and if default values of variables are acceptable.</li>
@@ -77,27 +79,21 @@ Set another Drupal hash salt in settings.file for passwords generation, reset pa
 <li>Analyze Apache Logs for POST keys with strings 'UPDATE', 'INSERT', 'DELETE', ‘?q=node&amp;destination=node’;</li>
 <li>Check places in Panels, Blocks, Views where custom PHP snippets might be used, e.g. in custom access rules.</li>
 <li>Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new;</li>
-<li>Check the database for new MySQL users, update MySQL passwords and regenerate passwords/tokens for any systems, which are integrated.</li>
+<li>Check the database for new MySQL users, update MySQL passwords and regenerate passwords/tokens for any systems, which are integrated;</li>
+<li>Set another Drupal hash salt in settings.file for passwords generation, reset passwords of all the users and send them new.</li>
 </ol>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/alehkot/drupal-security/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/alehkot/drupal-security/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/alehkot/drupal-security"></a> is maintained by <a href="https://github.com/alehkot">alehkot</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Drupal Security maintained by <a href="https://github.com/alehkot">alehkot</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
